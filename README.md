@@ -23,7 +23,7 @@ edit .env file and set database connection values
 
 $ php artisan key:generate
 
-run db migration with or without seeds:
+run db migration and seeds:
 $ php artisan migrate --seed
 
 $npm run dev    or $ npm run watch
