@@ -1,0 +1,304 @@
+.main-panel{
+    background: $bh-side;
+    .panel{
+        &_left{
+
+            background-color:$bh-light-v2;
+            box-shadow: 0 0.125rem 9.375rem rgba(90,97,105,.1), 0 0.25rem 0.5rem rgba(90,97,105,.12), 0 0.9375rem 1.375rem rgba(90,97,105,.1), 0 0.4375rem 2.1875rem rgba(165,182,201,.1);
+            @media (min-width: 1200px)
+            {
+                max-width: 300px;
+                min-width:290px;
+            }
+            >*
+            {
+                border-bottom:1px solid $bh-light-v3;
+                color:$bh-dark;
+                font-size: 0.9rem;
+                a{
+                    color:$bh-dark;
+                    text-decoration: none;
+                }
+                &.disable{
+                    opacity:0.6
+                }
+                @media (max-width: 991.98px)
+                {
+                    justify-content: center;
+                }
+                &:not(.disable):hover
+                {
+                   @include bgColorLighten($bh-light-v2,7%);
+                   cursor:pointer
+                }
+                .div-label
+                {
+                    @media (max-width: 991.98px)
+                    {
+                        display:none
+                    }
+                }
+            }
+        }
+        &_right{
+            &-cards
+            {
+                &--apts
+                {
+                    @include bgColorLighten ($bh-details, $perc:40%);
+                    @media (max-width: 825px) {
+                        margin-top: 1.5rem
+                    }
+                }
+                &--msgs
+                {
+                    @include bgColorLighten ($bh-default-v2, $perc:70%);
+                }
+                &--views
+                {
+                    @include bgColorLighten ($bh-default, $perc:40%);
+                    @media (max-width: 1206px) {
+                        margin-top: 1.5rem
+                    }
+                }
+                >*
+                {
+                    width:15%;
+                    min-width:240px;
+                    border-radius:10px;
+                    @include advShadow;
+                    @media (max-width: 420px)
+                    {
+                        min-width:200px;
+                        max-width:220px;
+                    }
+                    &:not(:last-child)
+                    {
+                        margin-right:15px;
+                    }
+                    .card
+                    {
+                    background: transparent;
+                    border:none;
+                    h2{
+                        font-size: 2.6rem;
+                        font-weight:600
+                    }
+                    }
+                }
+
+
+            }
+            &-table{
+                &--apt
+                {
+                    height:500px;
+                    @include advShadow;
+
+                    &, .title
+                    {
+                        @include borderRaidus(10px,10px,0px,0px);
+                    }
+                    &, .bh-table{
+
+                            @include borderRaidus(10px,10px,10px,10px);
+                            .col-infos{
+                                //width:300px;
+                                .desc-apt{
+                                    font-size: 0.9rem;
+                                    font-weight: 300;
+                                    max-width:290px;
+                                }
+                                i.fas{
+                                    background:$bh-details-v2;
+                                    padding:6px;
+                                    font-size:0.8rem;
+                                    @include borderRaidus(3px,3px,3px,3px);
+                                    margin-right:5px;
+                                }
+                            }
+
+                    }
+
+                    .title
+                    {
+                        background:$bh-light;
+                        color:$bh-dark;
+                    }
+                    .bh-table
+                    {
+
+                        height:425px;
+                        background:$bh-light;
+                        .btn
+                        {
+                            //background-color:$bh-details;
+                            border:none;
+                            &-paypal{
+                                background-color: #1e477a;
+                            }
+                            &-eye{
+                                background-color: $bh-details
+                            }
+
+                        }
+                        .img-apt{
+                            .wrap-div
+                            {
+                                width:80px;
+                                height:80px;
+                                position:relative;
+
+                                .img-div
+                                {
+                                    width:80px;
+                                    height:80px;
+                                    overflow: hidden;
+                                    img{
+                                        width:auto;
+                                        height:100%;
+                                        transform: translateX(-20%);
+                                    }
+                                }
+                                .id-apt
+                                {
+                                    position:absolute;
+                                    height: 40px;
+                                    width: 40px;
+                                    left:calc(100% - 20px);
+                                    top:50%;
+                                    transform: translateY(calc(-50%));
+                                    background:#fff;
+                                    text-align: center;
+                                    line-height: 35px;
+                                    border-radius: 50%;
+                                    @include advShadow;
+                                    font-size: 1.3rem;
+                                    z-index: 1;
+                                }
+                            }
+
+
+                        }
+                        .promo{
+                            color:$bh-details;
+                            font-size: 1.2rem;
+                            font-weight: 600;
+                        }
+                    }
+
+                }
+                &-group{}
+                &--msg,
+                &--ads{
+                    @include advShadow;
+                    background:$bh-light;
+                    flex-basis:40%;
+                    overflow: hidden;
+                    height:350px;
+                    @media (max-width: 1199.98px)
+                    {
+                        flex-basis:47%;
+                    }
+                    &, table
+                    {
+                        background:$bh-light;
+                        @include borderRaidus(10px,10px,10px,10px);
+                        .msg-icon,
+                        .ads-icon
+                        {
+                            color:$bh-default-v2
+                        }
+                        .msg-msg,
+                        .ads-time
+
+                        {
+                            font-size: 0.9rem;
+                            font-weight: 400;
+                        }
+                    }
+                    .bh-table{
+                        overflow-y: scroll;
+                        overflow-x: hidden;
+                        height:290px;
+                    }
+                    &,.title-panel{
+                        @include borderRaidus(10px,10px,0px,0px);
+                    }
+
+                }
+
+
+            }
+        }
+        .modal{
+
+            background-color: #252f32c6;
+        }
+        .modal-dialog{
+            margin: auto;
+            max-width:unset;
+
+            .modal-content
+            {
+                max-width:900px;
+                .modal-header span
+                {
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                }
+                @include advShadow;
+                .bh-modal-item
+                {
+                    margin:0 10px;
+                    flex-basis:250px;
+                    @include advShadow;
+                    .price,
+                    .apt{
+
+                        &_title,
+                        &_footer
+                        {
+                            background-color: $bh-dark;
+                            color:#fff;
+
+                        }
+                        &_info{
+                            position: relative;
+                            box-sizing: border-box;
+                            .price_price{
+                                position:absolute;
+                                bottom:86%;
+                                left:50%;
+                                height:90px;
+                                width:90px;
+                                border-radius: 50%;
+                                font-size: 1.4rem;
+                                line-height: 85px;
+                                transform:translateX(-50%);
+                                &.base{@include bgColorLighten($bh-default, 25%);}
+                                &.mid{@include bgColorLighten($bh-details, 25%);}
+                                &.high{@include bgColorLighten($bh-default-v2, 60%);}
+
+                            }
+                            .price_details
+                            {
+                                background-color: $bh-light;
+                                min-height:300px;
+                                .sub_text
+                                {
+                                    font-size:0.9rem;
+                                    color:$bh-dark;
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+            }
+        }
+    }
+}
+//

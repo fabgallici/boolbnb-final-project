@@ -1,0 +1,73 @@
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700&display=swap');
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+//utils
+@import 'utils.scss';
+// Variables
+@import 'variables';
+//container-main
+@import 'container-main.scss';
+
+//components
+@import 'components/input_number.scss';
+@import 'components/charts.scss';
+@import 'components/payment.scss';
+
+
+// nostri import
+@import 'navbar.scss';
+@import 'bg-index.scss';
+// @import 'search-bar.scss';
+@import 'footer.scss';
+
+
+//search page
+@import 'search/search-bar.scss';
+@import 'search/searchvue.scss';
+@import 'search/list-box-search.scss';
+@import 'search/page-search.scss';
+
+//user-panel-page
+@import 'user-panel/user-panel.scss';
+
+//show
+@import 'show/_show.scss';
+
+//login-register
+@import 'login-register/login-register.scss';
+
+
+
+
+
+html, body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  scroll-behavior: smooth;
+}
+
+.ad-result{
+  margin: 10px;
+  background-color: #91c59b;
+  text-align: center;
+}
+
+
+//
+
+
+
+
+h5{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.parsley-errors-list.filled {
+  color: $error-field;
+}
+//

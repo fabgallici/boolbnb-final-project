@@ -1,0 +1,52 @@
+//shadow
+@mixin shadow($x:0px,$y:0px,$blur:30px,$size:1px,$opac:0.4){
+    box-shadow: $x $y $blur $size rgba(0, 0, 0, $opac);
+}
+@mixin bgColorLighten ($color, $perc:50%) {
+    background-color: lighten($color, $perc);
+}
+@mixin colorLighten ($color, $perc:50%) {
+    color: lighten($color, $perc);
+}
+
+@mixin advShadow{
+    box-shadow: 0 2px 0 rgba(90,97,105,.11),
+                0 4px 8px rgba(90,97,105,.12),
+                0 10px 10px rgba(90,97,105,.06),
+                0 7px 70px rgba(90,97,105,.1);
+}
+@mixin borderRaidus($tl:0px,$tr:0px,$bl:0px,$br:0px) {
+    border-top-left-radius: $tl;
+    border-top-right-radius: $tr;
+    border-bottom-left-radius: $bl;
+    border-bottom-right-radius: $br;
+}
+@mixin alphaBgColor($color,$alpha){
+    background-color:rgba($color,$alpha) ;
+}
+
+
+//class only
+
+.bRad-top{
+    @include borderRaidus(10px, 10px, 0px, 0px)
+}
+.bRad-bottom{
+    @include borderRaidus(0, 0px, 10px, 10px)
+}
+.bRad-all{
+    @include borderRaidus(10px, 10px, 10px, 10px)
+}
+
+//positon aboslute top50 left50
+.abs-50-50{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.abs-0-0{
+    position: absolute;
+    top:0;
+    left:0;
+}

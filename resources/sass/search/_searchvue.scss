@@ -1,0 +1,168 @@
+.main-search{
+    #app-search{
+        max-width: 1200px;
+        padding-top:90px;
+        @include shadow($x:0px,$y:0px,$blur:30px,$size:1px,$opac:0.2);
+        i.bh-icon{
+            color:$bh-details
+        }
+        .searchvue{
+            .search{
+                &__top
+                {
+                    //margin-top: 130px;
+                    //height: 150px;
+                    //background-color: #fff;
+                    //border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+                   form
+                    {
+                        background:$bh-default-v2;
+                        color:#fff;
+                        padding:20px 0;
+                    }
+                    &-wrap
+                    {
+
+                        h5{
+                            max-width:350px;
+                            line-height:1.3rem;
+                            margin-bottom:0;
+                            padding-top:1.5rem;
+                            padding-bottom:1.5rem;
+                            text-align:right
+                        }
+                        .label-tomtom{
+                            font-size:0.9rem;
+                        }
+                        select{
+                            height:40px;
+                        }
+                    }
+                }
+                &__bottom
+                {
+                    min-height: 800px;
+                    &-left
+                    {
+                        background-color: $bh-light-v2;
+                        .quick-search
+                        {
+                            h5{
+                                background-color:rgba(210, 210, 210, 0.4);
+                                padding-top:30px;
+                                padding-bottom:30px;
+                                color:$bh-default-v2
+                            }
+                        }
+                        .option-search
+                        {
+                            label{
+                                text-align:right
+                            }
+                        }
+                        .check-search
+                        {
+                            i.fas{
+                                font-size:1rem;
+                                color:$bh-default-v2
+                            }
+                        }
+                    }
+                    &-right
+                    {
+                        .card{
+                            margin:20px;
+                            &:first-child{
+                                margin-top: 60px;
+                            }
+                            &__img
+                            {
+                                &-div
+                                {
+                                    height: auto;
+                                    width: 270px;
+                                }
+                                &-photo{
+                                    height:100%;
+                                }
+                            }
+                            &__body
+                            {
+                                background-color: $bh-side;
+                                &-text
+                                {
+                                    width:275px;
+                                    min-width:200px
+                                }
+                                &-title{
+                                    font-size:0.9rem;
+                                    font-weight: 600;
+                                }
+                                &-desc
+                                {
+                                    font-size:0.8rem;
+                                    color:$bh-dark;
+                                }
+                                &-configs
+                                {
+                                    >*
+                                    {
+                                        background: none;
+                                        border: none;
+                                    }
+                                    &--item
+                                    {
+                                        &:first-child{
+                                            padding-left:0 !important
+                                        }
+                                    }
+                                }
+                                &-info
+                                {
+                                    font-size:0.7rem;
+                                    p{
+                                       font-weight:700;
+                                       font-size:1.3rem;
+                                       line-height: 25px;
+                                       &:last-of-type{
+                                        font-size:0.8rem;
+                                        font-weight:500;
+                                        line-height: initial;
+                                       }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.button-show {
+  background-color: $bh-default;
+  border: none;
+  color: #000;
+
+  &:hover {
+    background-color: $bh-dark;
+    color:#fff !important
+  }
+}
+
+
+
+
+
+  .ad {
+    border: solid 3px $bh-details;
+  }
+
+  @media (max-width:991px) {
+    .card__img-photo {
+      height: auto;
+      width: unset;
+    }
+  }
+

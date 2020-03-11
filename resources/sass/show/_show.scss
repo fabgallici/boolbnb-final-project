@@ -1,0 +1,99 @@
+.main-show{
+    #notouchid{
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .jumbotron
+    {
+        position: relative;
+        height:500px;
+        min-height: 400px;
+        .greetings-sub{
+            p{
+                color:white;
+                font-size:1.8rem;
+                font-weight: 600;
+            }
+            .btn-danger{
+                background-color: $bh-details;
+                font-size:1.5rem;
+                font-weight: 600;
+                width:250px
+            }
+        }
+        .main-wrapper //div maps in abs position
+        {
+            //
+            position: absolute;
+            width: 100%;
+            bottom:-50%;
+            left:0;
+            z-index:1;
+            .mapboxgl-map{
+                box-shadow: 0 0 38px 19px rgba(0, 0, 0, .2), 21px -30px 28px 1px rgba(0, 0, 0, 0.4), -1px -2px 19px 2px rgba(0, 0, 0, .2);
+            }
+            @media(max-width: 992px) {
+                position:relative;
+                left:unset;
+                bottom:unset;
+            }
+        }
+    }
+
+    .div-colored{
+        height:300px;
+        background-color:#E8D5B5 ;
+        overflow:hidden;
+        position: relative;
+        &:after,
+        &:before{
+            display: block;
+            height: 150px;
+            width: 150px;
+            content: "";
+            background-color: #fff;
+            transform: rotate(-45deg) translate(137px, 35px);
+            }
+        &:after{
+            height: 330px;
+            width: 200px;
+            transform: rotate(-45deg) translate(41px, -134px);
+            background-color: #07073e;
+        }
+        h1{
+            font-weight: 300;
+            font-style: oblique;
+            margin-left:150px;
+            width:40%;
+            @media(max-width: 1199.98px) {
+                width:30%
+             }
+
+        }
+
+    }
+    .infos{
+        //height:300px;
+
+            &_right{
+                height: 100%;
+                font-weight: 300;
+                background-color:$bh-dark;
+                &--wrap{
+                    border:1px dotted rgba(255, 255, 255, 0.5);
+                    .div-config{
+                        color:white;
+                    }
+                }
+            }
+            &_left{
+                height: 100%;
+                background-color: white;
+                &--wrap{
+                    //border:1px dotted $bh-dark;
+                }
+            }
+
+    }
+}

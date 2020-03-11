@@ -1,0 +1,69 @@
+.main-payment{
+    color:#fff;
+    width: 100%;
+    height: 100%;
+    min-height:100vh;
+    background-color: #1248a5;
+    box-sizing: border-box;
+    .payment{
+        background: rgba(0,0,0,.5);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(2,2,2,.3);
+        border-radius: 10px;
+
+        &__wrap
+        {
+            input {
+                //width: 100%;
+                padding: 5px 15px;
+                font-size: 1.2em;
+                margin-bottom: 5px;
+                border: none;
+                border-bottom: 1px solid #fff;
+                outline: none;
+                background:transparent;
+                box-shadow:none;
+                color:#fff;
+                font-weight:300;
+            }
+            label
+            {
+                color:#00C4E6;
+                padding: 2px 5px;
+                font-size: 1.2em;
+
+            }
+            .spacer {
+                margin-bottom: 24px;
+            }
+            #card-number, #cvv, #expiration-date {
+                background: white;
+                height: 35px;
+                border: 1px solid #CED4DA;
+                padding: 5px 5px;
+                border-radius: 10px;
+            }
+            .bh-btn-success{
+                background-color: $bh-details;
+                border:none;
+                @include borderRaidus(20px,20px,20px,20px)
+            }
+            #label-cc{
+                font-size:1rem
+            }
+
+        }
+    }
+}
+
+
+
+/* .box
+
+.box input:focus ~ label,
+.boxx input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 10px;
+} */

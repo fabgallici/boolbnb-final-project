@@ -1,0 +1,19 @@
+#charts-modal{
+    .modal-dialog{
+        max-width:fit-content;
+        min-width:290px;
+        .container-stats{
+            @media (max-width: 575.98px) {
+                overflow-x:scroll
+            }
+            .chart-container {
+                position: relative;
+                margin: auto;
+                height: 30vh;
+                min-height:275px;
+                width: 40vw;
+                min-width:300px;
+              }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.main-access{
+    .back-home{
+        &, a{
+            color:$bh-default-v2;
+        }
+        a{
+            &:hover{
+                color:white
+            }
+        }
+    }
+    .card{
+        @include alphaBgColor($bh-default-v2,.7);
+        label{
+            color: #fff;
+        }
+        .bh-input-group{
+            position: relative;
+            input{
+                background-color: transparent !important;
+                border:none;
+                border-bottom:1px solid $bh-default;
+                color:$bh-light;
+                padding:1.6rem 2.8rem;
+                &:focus{
+                    border-bottom:1px solid $bh-default;
+                    outline: none;
+                    box-shadow:none;
+                    padding:1.6rem 2.8rem;
+
+                }
+                &::placeholder{
+                    color:$bh-light;
+                    padding:1.6rem 0rem;
+                }
+                &:required{
+                    background-color: transparent !important;
+                }
+            }
+            .input-icon{
+                position: absolute;
+                color:white;
+                font-size: 1.2rem;
+                top:50%;
+                left:0;
+                transform: translateY(calc(-50% - 2px));
+            }
+        }
+        button{
+            background-color: $bh-details;
+            border:none;
+            @include borderRaidus(32px,32px,32px,32px)
+        }
+        .btn-link{
+            &:first-child{
+                color:$bh-details;
+                font-weight:500
+            }
+            &.or{
+                color:#fff
+            }
+            &:last-child{
+                color:$bh-default;
+                font-weight:500
+            }
+        }
+    }
+    .modal-content{
+        background:transparent;
+        border-bottom:none;
+        .modal-header{
+            border-bottom: none;
+            button span{
+                font-size:2.5rem
+            }
+        }
+    }
+
+}
+.modal-backdrop{
+        z-index: 1029;
+}
+
+
+
+
+//modal
+/* .modal{
+    display:block;
+
+}
+.fade:not(.show){
+    opacity:1;
+
+} */

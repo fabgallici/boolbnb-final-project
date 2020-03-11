@@ -1,0 +1,33 @@
+main{
+    &.main-search,
+    &.main-panel,
+    &.main-show,
+    &.main-create,
+    &.main-update{
+        &.nav-fix{
+            margin-top:68.25px;
+        }
+    }
+    &.main-search{
+        background-image: url(../images/sea_4_1920.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    &.main-access{
+        background-image: linear-gradient(
+            to right top, #07073e, #00346d,
+            #006197, #0090b9,
+            #00c0d4, #00cde2,
+            #00dbf1, #00e9ff,
+            #00d2ff, #1bb1ff,
+            #b67cff, #ff00c2);
+        &:not(.bh-modal){
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+        }
+    }
+    &.main-payment{
+
+    }
+}
