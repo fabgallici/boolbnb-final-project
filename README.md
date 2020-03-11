@@ -11,6 +11,31 @@
 * apartments graphs with views and messages statistics
 * add sponsorship to apartment with Braintree
 
+### Installation: ###
+<pre>
+$ git clone https://github.com/fabgallici/boolbnb-final-project.git
+$ cd boolbnb-final-project
+$ composer install
+$ composer update
+$ npm install
+$ cp .env.example .env
+edit .env file and set database connection values
+
+$ php artisan key:generate
+
+run db migration with or without seeds:
+$ php artisan migrate --seed
+
+$npm run dev    or $ npm run watch
+
+setup local server:
+$ php artisan serve
+
+open browser on: http://localhost:8000/
+
+</pre>
+
+
 ![](images/bhootel.jpg)
 
 ![](images/bhootel2.jpg)
